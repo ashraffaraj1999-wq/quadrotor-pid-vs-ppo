@@ -1,0 +1,9 @@
+jax[cpu]==0.4.38
+gymnasium==1.0.0
+stable-baselines3==2.4.1
+torch==2.5.1
+numpy==1.26.4
+matplotlib==3.10.0
+pytest==8.3.4
+PyYAML==6.0.2
+

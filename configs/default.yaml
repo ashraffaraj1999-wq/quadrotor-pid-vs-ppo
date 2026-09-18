@@ -1,0 +1,25 @@
+simulation:
+  dt: 0.01
+  episode_seconds: 10.0
+  integrator: rk4
+vehicle:
+  mass: 1.50
+  inertia: [0.029, 0.029, 0.055]
+  arm_length: 0.23
+  max_rotor_thrust: 9.0
+  yaw_moment_coefficient: 0.018
+  linear_drag: [0.12, 0.12, 0.20]
+task:
+  # NED z is positive down, so -2 m means two metres above the origin.
+  reference_position: [0.0, 0.0, -2.0]
+  workspace_limit: 8.0
+  max_tilt_degrees: 80.0
+training:
+  seed: 7
+  timesteps: 200000
+  learning_rate: 0.0003
+  n_steps: 1024
+  batch_size: 256
+evaluation:
+  seeds: [11, 22, 33]
+  episodes_per_scenario: 10

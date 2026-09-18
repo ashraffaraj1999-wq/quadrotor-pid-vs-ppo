@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# ROS 2 / colcon generated trees
+ros2_gazebo_ws/build/
+ros2_gazebo_ws/install/
+ros2_gazebo_ws/log/
+
+# Runtime recordings and logs
+*.log
+ros2_gazebo_ws/results/*.csv
+
+# Keep the checked-in educational checkpoints and final result artifacts.

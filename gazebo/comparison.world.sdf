@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="quad_comparison">
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <light type="directional" name="sun"><direction>-0.5 0.3 -1</direction></light>
+    <model name="ground">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry>
+        </visual>
+      </link>
+    </model>
+    <include><uri>model://quadrotor_visual</uri><name>pid_quad</name><pose>0 0 2 0 0 0</pose></include>
+    <include><uri>model://quadrotor_visual</uri><name>ppo_quad</name><pose>0 0 2 0 0 0</pose></include>
+  </world>
+</sdf>

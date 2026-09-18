@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="quadrotor_visual">
+    <static>true</static>
+    <link name="body">
+      <visual name="core">
+        <geometry><box><size>0.18 0.12 0.06</size></box></geometry>
+        <material><ambient>0.1 0.35 0.8 1</ambient><diffuse>0.1 0.35 0.8 1</diffuse></material>
+      </visual>
+      <visual name="arm_a">
+        <pose>0 0 0 0 0 0.7854</pose>
+        <geometry><box><size>0.55 0.025 0.025</size></box></geometry>
+      </visual>
+      <visual name="arm_b">
+        <pose>0 0 0 0 0 -0.7854</pose>
+        <geometry><box><size>0.55 0.025 0.025</size></box></geometry>
+      </visual>
+      <visual name="front">
+        <pose>0.16 0 0.04 0 0 0</pose>
+        <geometry><sphere><radius>0.035</radius></sphere></geometry>
+        <material><ambient>0.9 0.15 0.1 1</ambient><diffuse>0.9 0.15 0.1 1</diffuse></material>
+      </visual>
+    </link>
+  </model>
+</sdf>
